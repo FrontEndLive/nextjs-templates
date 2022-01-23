@@ -1,0 +1,73 @@
+{
+  "name": "generator-felive",
+  "version": "1.0.0-beta.1",
+  "description": "Generates a NextJS project with TypeScript, Tailwind, Storybook, Jest, and more pre-configured",
+  "homepage": "",
+  "author": {
+    "name": "Spencer Kline",
+    "email": "dskline1@gmail.com"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "NextJS",
+    "TypeScript",
+    "Tailwind CSS",
+    "Storybook",
+    "Jest",
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^3.0.9",
+    "jest": "^26.1.0",
+    "lint-staged": "^9.4.3",
+    "prettier": "^2.5.1",
+    "yeoman-assert": "^3.1.1",
+    "yeoman-test": "^1.7.0"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "dependencies": {
+    "yeoman-generator": "^3.1.1",
+    "chalk": "^2.1.0",
+    "yosay": "^2.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    }
+  },
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "jest __tests__"
+  },
+  "repository": "frontendlive/generator-felive",
+  "license": "MIT"
+}
