@@ -1,6 +1,6 @@
 {
   "name": "generator-felive",
-  "version": "1.0.0-beta.4",
+  "version": "1.0.0-beta.5",
   "description": "Generates a NextJS project with TypeScript, Tailwind, Storybook, Jest, and more pre-configured",
   "homepage": "",
   "author": {

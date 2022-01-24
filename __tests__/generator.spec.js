@@ -11,13 +11,16 @@ describe("generator-felive", () => {
   });
 
   it("creates files", () => {
-    assert.file(["test-project/README.md", "test-project/package.json", "test-project/.gitignore"]);
+    assert.file([
+      "test-project/README.md",
+      "test-project/package.json",
+      "test-project/.gitignore",
+    ]);
   });
 
   it("inserts the project name into package.json", () => {
     assert.jsonFileContent("test-project/package.json", {
-      name: "@frontendlive/test-project"
+      name: "@frontendlive/test-project",
     });
   });
-
 });
