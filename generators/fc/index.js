@@ -25,7 +25,7 @@ module.exports = class extends Generator {
 
   writing() {
     const componentNameCapitalized = this.props.name.charAt(0).toUpperCase() + this.props.name.slice(1);
-    let files = ["Component.tsx", "Component.spec.tsx", "index.ts"];
+    let files = ["Component.tsx", "Component.spec.tsx"];
     if (this.props.useStorybook) {
       files.push("Component.stories.tsx");
     }
