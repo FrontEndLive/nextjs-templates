@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import HomePage from 'visible/features/pages/HomePage/HomePage';
+import HomePage from './Home';
 
 describe('HomePage', () => {
   it('renders without crashing', () => {

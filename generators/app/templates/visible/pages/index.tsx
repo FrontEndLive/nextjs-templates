@@ -1,7 +1,11 @@
-import type { NextPage } from 'next';
+import type { NextPage } from '@frontendlive/nextjs-utils';
 
-import HomePage from '@/features/pages/HomePage/HomePage';
+import Home from '@/features/core/Home/Home';
 
-const Page: NextPage = () => <HomePage />;
+const Page: NextPage = () => <Home />;
+
+Page.route = {
+  path: '/',
+};
 
 export default Page;
