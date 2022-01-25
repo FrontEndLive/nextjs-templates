@@ -11,7 +11,7 @@ describe("generator-felive:fc", () => {
   });
 
   it("creates files", () => {
-    assert.file(["NavBar/NavBar.tsx", "NavBar/NavBar.spec.tsx"]);
+    assert.file(["NavBar/index.tsx", "NavBar/NavBar.spec.tsx"]);
     assert.noFile(["NavBar/NavBar.stories.tsx"]);
   });
 });
@@ -25,7 +25,7 @@ describe("generator-felive:fc with Storybook", () => {
 
   it("creates files", () => {
     assert.file([
-      "NavBar/NavBar.tsx",
+      "NavBar/index.tsx",
       "NavBar/NavBar.spec.tsx",
       "NavBar/NavBar.stories.tsx",
     ]);
