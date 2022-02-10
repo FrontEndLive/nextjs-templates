@@ -1,6 +1,6 @@
 import type { NextPage } from '@frontendlive/nextjs-utils';
 
-import Home from '@/features/core/Home/Home';
+import Home from '@/features/core/Home';
 
 const Page: NextPage = () => <Home />;
 
