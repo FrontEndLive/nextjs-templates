@@ -9,6 +9,12 @@ module.exports = class extends Generator {
         name: "projectName",
         message: "Project name",
       },
+      {
+        type: "confirm",
+        name: "includeInstall",
+        message: "Install dependencies?",
+        default: true,
+      },
     ];
 
     return this.prompt(prompts).then((props) => {
@@ -40,8 +46,10 @@ module.exports = class extends Generator {
   }
 
   install() {
-    this.spawnCommandSync("pnpm", ["install"], {
-      cwd: this.destinationPath(this.props.projectName),
-    });
+    if (this.props.includeInstall) {
+      this.spawnCommandSync("pnpm", ["install"], {
+        cwd: this.destinationPath(this.props.projectName),
+      });
+    }
   }
 };

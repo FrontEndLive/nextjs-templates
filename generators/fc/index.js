@@ -10,10 +10,10 @@ module.exports = class extends Generator {
         message: "Component name",
       },
       {
+        type: "confirm",
         name: "useStorybook",
         message: "Use Storybook?",
         default: false,
-        type: "confirm",
       },
     ];
 

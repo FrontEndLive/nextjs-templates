@@ -1,17 +1,29 @@
 "use strict";
 const path = require("path");
-const assert = require("yeoman-assert");
 const helpers = require("yeoman-test");
 
-describe("generator-felive", () => {
-  beforeAll(() => {
-    return helpers
-      .run(path.join(__dirname, "../generators/app"))
-      .withPrompts({ projectName: "test-project" });
+const generator = require("../generators/app");
+
+jest.setTimeout(30000);
+
+describe("yo fel-nextjs", () => {
+  let runResult;
+
+  beforeAll(async () => {
+    runResult = await helpers
+      .run(generator, {
+        resolved: require.resolve(
+          path.join(__dirname, "../generators/app/index.js")
+        ),
+        namespace: "fel-nextjs",
+      })
+      .withPrompts({
+        projectName: "test-project",
+      });
   });
 
   it("creates files", () => {
-    assert.file([
+    runResult.assertFile([
       "test-project/README.md",
       "test-project/package.json",
       "test-project/.gitignore",
@@ -19,7 +31,7 @@ describe("generator-felive", () => {
   });
 
   it("inserts the project name into package.json", () => {
-    assert.jsonFileContent("test-project/package.json", {
+    runResult.assertJsonFileContent("test-project/package.json", {
       name: "@frontendlive/test-project",
     });
   });

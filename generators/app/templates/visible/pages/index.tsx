@@ -1,4 +1,4 @@
-import type { NextPage } from '@frontendlive/nextjs-utils';
+import { NextPage } from '@frontendlive/nextjs-utils';
 
 import Home from '@/features/core/Home';
 

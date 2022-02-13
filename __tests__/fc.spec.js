@@ -1,30 +1,49 @@
 "use strict";
 const path = require("path");
-const assert = require("yeoman-assert");
 const helpers = require("yeoman-test");
+const generator = require("../generators/fc");
 
-describe("generator-felive:fc", () => {
-  beforeAll(() => {
-    return helpers
-      .run(path.join(__dirname, "../generators/fc"))
-      .withPrompts({ name: "NavBar", useStorybook: false });
+describe("yo felive-nextjs:fc", () => {
+  let runResult;
+
+  beforeAll(async () => {
+    runResult = await helpers
+      .run(generator, {
+        resolved: require.resolve(
+          path.join(__dirname, "../generators/fc/index.js")
+        ),
+        namespace: "fel-nextjs:fc",
+      })
+      .withPrompts({
+        name: "NavBar",
+      });
   });
 
   it("creates files", () => {
-    assert.file(["NavBar/index.tsx", "NavBar/NavBar.spec.tsx"]);
-    assert.noFile(["NavBar/NavBar.stories.tsx"]);
+    runResult.assertFile(["NavBar/index.tsx", "NavBar/NavBar.spec.tsx"]);
+    runResult.assertNoFile(["NavBar/NavBar.stories.tsx"]);
   });
 });
 
-describe("generator-felive:fc with Storybook", () => {
-  beforeAll(() => {
-    return helpers
-      .run(path.join(__dirname, "../generators/fc"))
-      .withPrompts({ name: "NavBar", useStorybook: true });
+describe("yo felive-nextjs:fc (with Storybook)", () => {
+  let runResult;
+
+  beforeAll(async () => {
+    runResult = await helpers
+      .run(generator, {
+        resolved: require.resolve(
+          path.join(__dirname, "../generators/fc/index.js")
+        ),
+        namespace: "fel-nextjs:fc",
+      })
+      .withPrompts({
+        name: "NavBar",
+        useStorybook: true,
+      });
   });
 
   it("creates files", () => {
-    assert.file([
+    runResult.assertFile([
       "NavBar/index.tsx",
       "NavBar/NavBar.spec.tsx",
       "NavBar/NavBar.stories.tsx",
