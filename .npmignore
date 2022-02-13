@@ -1,5 +1,0 @@
-node_modules
-coverage
-
-generators/**/pnpm-lock.yaml
-generators/**/node_modules
