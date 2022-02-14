@@ -12,7 +12,7 @@ describe("yo felive-nextjs:fc", () => {
         resolved: require.resolve(
           path.join(__dirname, "../generators/fc/index.js")
         ),
-        namespace: "fel-nextjs:fc",
+        namespace: "felive-nextjs:fc",
       })
       .withPrompts({
         name: "NavBar",
@@ -34,7 +34,7 @@ describe("yo felive-nextjs:fc (with Storybook)", () => {
         resolved: require.resolve(
           path.join(__dirname, "../generators/fc/index.js")
         ),
-        namespace: "fel-nextjs:fc",
+        namespace: "felive-nextjs:fc",
       })
       .withPrompts({
         name: "NavBar",

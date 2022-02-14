@@ -1,13 +1,13 @@
-# generator-felive [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-felive-nextjs [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 > Generates a NextJS project with TypeScript, Tailwind, Storybook, Jest, and more pre-configured
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-felive using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and generator-felive-nextjs using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
 npm install -g yo
-npm install -g generator-felive
+npm install -g generator-felive-nextjs
 ```
 
 Then generate your new project:
@@ -27,10 +27,7 @@ yo felive
 
 MIT © [Spencer Kline]()
 
-
-[npm-image]: https://badge.fury.io/js/generator-felive.svg
-[npm-url]: https://npmjs.org/package/generator-felive
-[travis-image]: https://travis-ci.com/frontendlive/generator-felive.svg?branch=master
-[travis-url]: https://travis-ci.com/frontendlive/generator-felive
-[daviddm-image]: https://david-dm.org/frontendlive/generator-felive.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/frontendlive/generator-felive
+[npm-image]: https://badge.fury.io/js/generator-felive-nextjs.svg
+[npm-url]: https://npmjs.org/package/generator-felive-nextjs
+[travis-image]: https://travis-ci.com/frontendlive/generator-felive-nextjs.svg?branch=master
+[travis-url]: https://travis-ci.com/frontendlive/generator-felive-nextjs

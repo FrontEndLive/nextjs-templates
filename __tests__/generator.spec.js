@@ -6,7 +6,7 @@ const generator = require("../generators/app");
 
 jest.setTimeout(30000);
 
-describe("yo fel-nextjs", () => {
+describe("yo felive-nextjs", () => {
   let runResult;
 
   beforeAll(async () => {
@@ -15,7 +15,7 @@ describe("yo fel-nextjs", () => {
         resolved: require.resolve(
           path.join(__dirname, "../generators/app/index.js")
         ),
-        namespace: "fel-nextjs",
+        namespace: "felive-nextjs",
       })
       .withPrompts({
         projectName: "test-project",
