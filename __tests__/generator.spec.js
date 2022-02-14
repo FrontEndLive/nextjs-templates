@@ -19,19 +19,20 @@ describe("yo felive-nextjs", () => {
       })
       .withPrompts({
         projectName: "test-project",
+        includeInstall: false,
       });
   });
 
   it("creates files", () => {
     runResult.assertFile([
-      "test-project/README.md",
-      "test-project/package.json",
-      "test-project/.gitignore",
+      "test-project/webapp/README.md",
+      "test-project/webapp/package.json",
+      "test-project/webapp/.gitignore",
     ]);
   });
 
   it("inserts the project name into package.json", () => {
-    runResult.assertJsonFileContent("test-project/package.json", {
+    runResult.assertJsonFileContent("test-project/webapp/package.json", {
       name: "@frontendlive/test-project",
     });
   });
