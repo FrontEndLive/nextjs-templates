@@ -16,7 +16,7 @@
   "devDependencies": {
     "@babel/core": "7.17.5",
     "@next/eslint-plugin-next": "12.1.0",
-    "@frontendlive/eslint-config": "1.0.3",
+    "@frontendlive/eslint-config": "1.0.4",
     "@testing-library/jest-dom": "5.16.2",
     "@testing-library/react": "12.1.3",
     "@types/jest": "27.4.1",
