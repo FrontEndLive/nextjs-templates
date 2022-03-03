@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import Component from './';
+import Component from '.';
 
 describe('Component', () => {
   it('renders without crashing', () => {
