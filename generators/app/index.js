@@ -25,13 +25,13 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    // Copy all files in templates folder
+    // Copy all core files in templates folder
     this.fs.copy(
-      this.templatePath("hidden/gitignore"),
+      this.templatePath("core/hidden/gitignore"),
       this.destinationPath(this.props.projectDirectory + "/.gitignore")
     );
     this.fs.copy(
-      this.templatePath("visible/**/*"),
+      this.templatePath("core/visible/**/*"),
       this.destinationPath(this.props.projectDirectory)
     );
 
