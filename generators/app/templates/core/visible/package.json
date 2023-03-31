@@ -2,8 +2,9 @@
   "name": "project-name",
   "version": "1.0.0",
   "scripts": {
-    "start": "doppler run -- next dev",
-    "build": "doppler run -- next build",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint",
     "test": "vitest"
   },
@@ -13,7 +14,6 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@babel/core": "7.21.3",
     "@frontendlive/eslint-config": "1.1.5",
     "@next/eslint-plugin-next": "13.2.4",
     "@testing-library/react": "14.0.0",
@@ -22,7 +22,6 @@
     "@vitejs/plugin-react": "3.1.0",
     "autoprefixer": "10.4.14",
     "eslint": "8.37.0",
-    "jsdom": "21.1.1",
     "postcss": "8.4.21",
     "prettier": "2.8.7",
     "tailwindcss": "3.3.0",

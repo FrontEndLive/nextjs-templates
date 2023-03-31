@@ -1,6 +1,6 @@
 {
   "name": "generator-felive-nextjs",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Generates a NextJS project with TypeScript, Tailwind, Jest, ESLint, and more pre-configured",
   "homepage": "",
   "author": {
