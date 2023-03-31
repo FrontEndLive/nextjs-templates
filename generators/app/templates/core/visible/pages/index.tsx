@@ -1,4 +1,4 @@
-import Home from '@/features/core/Home';
+import Home from "@/features/home";
 
 const Page = () => <Home />;
 

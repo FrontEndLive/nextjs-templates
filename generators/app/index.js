@@ -31,6 +31,10 @@ module.exports = class extends Generator {
       this.destinationPath(this.props.projectDirectory + "/.gitignore")
     );
     this.fs.copy(
+      this.templatePath("core/hidden/eslintrc.js"),
+      this.destinationPath(this.props.projectDirectory + "/.eslintrc.js")
+    );
+    this.fs.copy(
       this.templatePath("core/visible/**/*"),
       this.destinationPath(this.props.projectDirectory)
     );

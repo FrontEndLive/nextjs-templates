@@ -1,4 +1,4 @@
-import '@/theme/global.css';
+import '@/features/theme/global.css';
 import type { AppProps } from 'next/app';
 
 const BasePage = ({ Component, pageProps }: AppProps) => (

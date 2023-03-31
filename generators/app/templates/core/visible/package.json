@@ -2,50 +2,32 @@
   "name": "project-name",
   "version": "1.0.0",
   "scripts": {
-    "start": "next dev",
-    "build": "next build",
+    "start": "doppler run -- next dev",
+    "build": "doppler run -- next build",
     "lint": "next lint",
-    "test": "jest"
+    "test": "vitest"
   },
   "dependencies": {
-    "@frontendlive/nextjs-utils": "^1.0.2",
-    "jest-environment-jsdom": "^28.0.2",
-    "next": "^12.1.6",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "next": "13.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.10",
-    "@frontendlive/eslint-config": "^1.0.7",
-    "@next/eslint-plugin-next": "^12.1.6",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.2.0",
-    "@types/jest": "^27.5.0",
-    "@types/node": "^17.0.31",
-    "@types/react": "^18.0.8",
-    "autoprefixer": "^10.4.7",
-    "eslint": "^8.14.0",
-    "jest": "^28.0.3",
-    "postcss": "^8.4.13",
-    "prettier": "^2.6.2",
-    "tailwindcss": "^3.0.24",
-    "ts-jest": "^28.0.1",
-    "typescript": "^4.6.4"
-  },
-  "eslintConfig": {
-    "ignorePatterns": [
-      "**/*.js"
-    ],
-    "extends": [
-      "@frontendlive"
-    ],
-    "parserOptions": {
-      "project": "./tsconfig.json"
-    },
-    "settings": {
-      "polyfills": [
-        "fetch"
-      ]
-    }
+    "@babel/core": "7.21.3",
+    "@frontendlive/eslint-config": "1.1.5",
+    "@next/eslint-plugin-next": "13.2.4",
+    "@testing-library/react": "14.0.0",
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.31",
+    "@vitejs/plugin-react": "3.1.0",
+    "autoprefixer": "10.4.14",
+    "eslint": "8.37.0",
+    "jsdom": "21.1.1",
+    "postcss": "8.4.21",
+    "prettier": "2.8.7",
+    "tailwindcss": "3.3.0",
+    "typescript": "5.0.2",
+    "vite": "4.2.1",
+    "vitest": "0.29.8"
   }
 }
